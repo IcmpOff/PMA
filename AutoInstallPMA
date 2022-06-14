@@ -1,0 +1,9 @@
+yum install perl -y
+yum install gcc -y
+yum install cpan -y
+yum update
+cpan force install Parallel::ForkManager
+cpan force install URI::_foreign
+cpan force install LWP
+cpan force install Time::HiRes
+cpan force install HTML::Parser

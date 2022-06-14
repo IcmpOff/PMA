@@ -1,0 +1,3 @@
+perl x -x
+rm -rf bios.txt
+sh beta.sh
